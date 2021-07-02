@@ -1,0 +1,69 @@
+.square{
+    position: absolute;
+    width: 10%;
+    padding-bottom: 10%; /* = width for a square aspect ratio */
+}
+.squareUnvisited {
+    background-color: rgba(216, 98, 20, 0.178);
+}
+.squareVisited {
+    background-color: lightgrey;
+}
+.squareColumnOne{
+    left: 5%;
+}
+.squareColumnTwo{
+    left: 15%;
+}
+.squareColumnThree{
+    left: 25%;
+}
+.squareColumnFour{
+    left: 35%;
+}
+.squareColumnFive{
+    left: 45%;
+}
+.squareColumnSix{
+    left: 55%;
+}
+.squareRowOne{
+    top:max(75px, 15%);
+}
+.edge{
+    position: absolute;
+}
+.edgeVertical{
+    background-color: black;
+    width: 2%;
+    padding-bottom: 10%; /* = width for a square aspect ratio */
+}
+.edgeTop{
+    background-color: black;
+    width: 10%;
+    padding-bottom: 2%; /* = width for a square aspect ratio */
+}
+.edgeColumnOne{
+    left: 5%;
+}
+.edgeColumnTwo{
+    left: 15%;
+}
+.edgeColumnThree{
+    left: 25%;
+}
+.edgeColumnFour{
+    left: 35%;
+}
+.edgeColumnFive{
+    left: 45%;
+}
+.edgeColumnSix{
+    left: 55%;
+}
+.edgeColumnSeven{
+    left: 65%;
+}
+.edgeRowOne{
+    top:max(75px, 15%);
+}
