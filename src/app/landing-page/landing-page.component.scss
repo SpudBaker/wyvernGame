@@ -1,7 +1,14 @@
+.divOuter{
+    position: absolute;
+    top:75px;
+    left:5%;
+    width: 40%;
+    padding-bottom: 40%; /* = width for a square aspect ratio */
+}
 .square{
     position: absolute;
-    width: 10%;
-    padding-bottom: 10%; /* = width for a square aspect ratio */
+    width: 15%;
+    padding-bottom: 15%; /* = width for a square aspect ratio */
 }
 .squareUnvisited {
     background-color: rgba(216, 98, 20, 0.178);
@@ -13,57 +20,107 @@
     left: 5%;
 }
 .squareColumnTwo{
-    left: 15%;
+    left: 20%;
 }
 .squareColumnThree{
-    left: 25%;
-}
-.squareColumnFour{
     left: 35%;
 }
+.squareColumnFour{
+    left: 50%;
+}
 .squareColumnFive{
-    left: 45%;
+    left: 65%;
 }
 .squareColumnSix{
-    left: 55%;
+    left: 80%;
 }
 .squareRowOne{
-    top:max(75px, 15%);
+    top:5%;
+}
+.squareRowTwo{
+    top:20%;
+}
+.squareRowThree{
+    top:35%;
+}
+.squareRowFour{
+    top:50%;
+}
+.squareRowFive{
+    top:65%;
+}
+.squareRowSix{
+    top:80%;
 }
 .edge{
     position: absolute;
 }
-.edgeVertical{
+.edgeBorderHorizontal{
+    background-color: black;
+    width: 17%;
+    padding-bottom: 2%; /* = width for a square aspect ratio */
+}
+.edgeBorderVertical{
     background-color: black;
     width: 2%;
-    padding-bottom: 10%; /* = width for a square aspect ratio */
+    padding-bottom: 17%; /* = width for a square aspect ratio */
 }
-.edgeTop{
+.edgeOpening{
+    background-color: yellow;
+}
+.edgeUnknown{
+    background-color: yellow;
+}
+.edgeWall{
     background-color: black;
-    width: 10%;
+}
+.edgeHorizontal{
+    width: 15%;
     padding-bottom: 2%; /* = width for a square aspect ratio */
+}
+.edgeVertical{
+    width: 2%;
+    padding-bottom: 15%; /* = width for a square aspect ratio */
 }
 .edgeColumnOne{
     left: 5%;
 }
 .edgeColumnTwo{
-    left: 15%;
+    left: 20%;
 }
 .edgeColumnThree{
-    left: 25%;
-}
-.edgeColumnFour{
     left: 35%;
 }
+.edgeColumnFour{
+    left: 50%;
+}
 .edgeColumnFive{
-    left: 45%;
-}
-.edgeColumnSix{
-    left: 55%;
-}
-.edgeColumnSeven{
     left: 65%;
 }
+.edgeColumnSix{
+    left: 80%;
+}
+.edgeColumnSeven{
+    left: 95%;
+}
 .edgeRowOne{
-    top:max(75px, 15%);
+    top:5%;
+}
+.edgeRowTwo{
+    top:20%;
+}
+.edgeRowThree{
+    top:35%;
+}
+.edgeRowFour{
+    top:50%;
+}
+.edgeRowFive{
+    top:65%;
+}
+.edgeRowSix{
+    top:80%;
+}
+.edgeRowSeven{
+    top:95%;
 }
