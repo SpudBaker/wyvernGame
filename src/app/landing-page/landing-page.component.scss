@@ -16,54 +16,55 @@
 .squareVisited {
     background-color: lightgrey;
 }
-.squareColumnOne{
+.squareColumn1{
     left: 5%;
 }
-.squareColumnTwo{
+.squareColumn2{
     left: 20%;
 }
-.squareColumnThree{
+.squareColumn3{
     left: 35%;
 }
-.squareColumnFour{
+.squareColumn4{
     left: 50%;
 }
-.squareColumnFive{
+.squareColumn5{
     left: 65%;
 }
-.squareColumnSix{
+.squareColumn6{
     left: 80%;
 }
-.squareRowOne{
+.squareRow1{
     top:5%;
 }
-.squareRowTwo{
+.squareRow2{
     top:20%;
 }
-.squareRowThree{
+.squareRow3{
     top:35%;
 }
-.squareRowFour{
+.squareRow4{
     top:50%;
 }
-.squareRowFive{
+.squareRow5{
     top:65%;
 }
-.squareRowSix{
+.squareRow6{
     top:80%;
 }
 .edge{
     position: absolute;
 }
 .edgeBorderHorizontal{
-    background-color: black;
     width: 17%;
     padding-bottom: 2%; /* = width for a square aspect ratio */
 }
 .edgeBorderVertical{
-    background-color: black;
     width: 2%;
     padding-bottom: 17%; /* = width for a square aspect ratio */
+}
+.edgeBorder{
+    background-color: black;
 }
 .edgeOpening{
     background-color: yellow;
@@ -82,45 +83,88 @@
     width: 2%;
     padding-bottom: 15%; /* = width for a square aspect ratio */
 }
-.edgeColumnOne{
+.edgeColumn1{
     left: 5%;
 }
-.edgeColumnTwo{
+.edgeColumn2{
     left: 20%;
 }
-.edgeColumnThree{
+.edgeColumn3{
     left: 35%;
 }
-.edgeColumnFour{
+.edgeColumn4{
     left: 50%;
 }
-.edgeColumnFive{
+.edgeColumn5{
     left: 65%;
 }
-.edgeColumnSix{
+.edgeColumn6{
     left: 80%;
 }
-.edgeColumnSeven{
+.edgeColumn7{
     left: 95%;
 }
-.edgeRowOne{
+.edgeRow1{
     top:5%;
 }
-.edgeRowTwo{
+.edgeRow2{
     top:20%;
 }
-.edgeRowThree{
+.edgeRow3{
     top:35%;
 }
-.edgeRowFour{
+.edgeRow4{
     top:50%;
 }
-.edgeRowFive{
+.edgeRow5{
     top:65%;
 }
-.edgeRowSix{
+.edgeRow6{
     top:80%;
 }
-.edgeRowSeven{
+.edgeRow7{
     top:95%;
+}
+.dot {
+    position: absolute;
+    height: 9%;
+    width: 9%;
+    background-color: red;
+    border-radius: 50%;
+}
+.dotColumn1{
+    left: 9%;
+}
+.dotColumn2{
+    left: 24%;
+}
+.dotColumn3{
+    left: 39%;
+}
+.dotColumn4{
+    left: 54%;
+}
+.dotColumn5{
+    left: 69%;
+}
+.dotColumn6{
+    left: 84%;
+}
+.dotRow1{
+    top:9%;
+}
+.dotRow2{
+    top:24%;
+}
+.dotRow3{
+    top:39%;
+}
+.dotRow4{
+    top:54%;
+}
+.dotRow5{
+    top:69%;
+}
+.dotRow6{
+    top:84%;
 }
