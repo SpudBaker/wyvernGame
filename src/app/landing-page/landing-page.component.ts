@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 enum EdgeState {
-  Border = 'Border',
-  Opening = 'Opening',
-  Unknown = 'Unknown',
-  Wall = 'Wall'
+  Border = 'edgeBorder',
+  Opening = 'edgeOpening',
+  Unknown = 'edgeUnknown',
+  Wall = 'edgeWall'
 }
 
 enum EdgeType {
@@ -159,8 +159,16 @@ export class LandingPageComponent implements OnInit {
     }
   }
 
-  edgeClick(e: MouseEvent){
-    console.log(e.target);
+  edgeClick(e: MouseEvent, orientation: string, h:string, v: string){
+    switch(this.edgeModel[orientation][h][v]) {
+      case EdgeState.Unknown: {
+        this.edgeModel[orientation][h][v] = EdgeState.Wall;
+        break;
+      }
+      case EdgeState.Wall:
+        this.edgeModel[orientation][h][v] = EdgeState.Unknown;
+        break;
+    }
   }
 
 }
