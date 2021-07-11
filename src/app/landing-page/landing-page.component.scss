@@ -125,46 +125,58 @@
 .edgeRow7{
     top:95%;
 }
-.dot {
+.corner{
+    position: absolute;
+    height: 2%;
+    width: 2%;
+}
+.marker {
     position: absolute;
     height: 9%;
     width: 9%;
     background-color: red;
     border-radius: 50%;
 }
-.dotColumn1{
+.pieceColumn1{
     left: 9%;
 }
-.dotColumn2{
+.pieceColumn2{
     left: 24%;
 }
-.dotColumn3{
+.pieceColumn3{
     left: 39%;
 }
-.dotColumn4{
+.pieceColumn4{
     left: 54%;
 }
-.dotColumn5{
+.pieceColumn5{
     left: 69%;
 }
-.dotColumn6{
+.pieceColumn6{
     left: 84%;
 }
-.dotRow1{
+.pieceRow1{
     top:9%;
 }
-.dotRow2{
+.pieceRow2{
     top:24%;
 }
-.dotRow3{
+.pieceRow3{
     top:39%;
 }
-.dotRow4{
+.pieceRow4{
     top:54%;
 }
-.dotRow5{
+.pieceRow5{
     top:69%;
 }
-.dotRow6{
+.pieceRow6{
     top:84%;
+}
+.target {
+    position: absolute;
+    height: 9%;
+    width: 9%;
+    background-color: blue;
+    border-radius: 50%;
 }

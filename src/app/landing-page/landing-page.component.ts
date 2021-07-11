@@ -20,155 +20,197 @@ enum EdgeType {
 
 export class LandingPageComponent implements OnInit {
 
-  edgeModel : any;
+  gameModel : any;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.edgeModel = {
+    this.gameModel = {
+      marker: {
+        horizontal: 1,
+        vertical: 1
+      },
+      target: {
+        horizontal: 6,
+        vertical: 6
+      },
       vertical: {
-        one: {
-            one: EdgeState.Border,
-            two: EdgeState.Border,
-            three: EdgeState.Border,
-            four: EdgeState.Border,
-            five: EdgeState.Border,
-            six: EdgeState.Border,
-            seven: EdgeState.Border
+        '1': {
+            '1': EdgeState.Border,
+            '2': EdgeState.Border,
+            '3': EdgeState.Border,
+            '4': EdgeState.Border,
+            '5': EdgeState.Border,
+            '6': EdgeState.Border,
+            '7': EdgeState.Border
           },
-        two: {
-            one: EdgeState.Unknown,
-            two: EdgeState.Unknown,
-            three: EdgeState.Unknown,
-            four: EdgeState.Unknown,
-            five: EdgeState.Unknown,
-            six: EdgeState.Unknown,
-            seven: EdgeState.Unknown
+        2: {
+            1: EdgeState.Unknown,
+            2: EdgeState.Unknown,
+            3: EdgeState.Unknown,
+            4: EdgeState.Unknown,
+            5: EdgeState.Unknown,
+            6: EdgeState.Unknown,
+            7: EdgeState.Unknown
           },
-        three: {
-            one: EdgeState.Unknown,
-            two: EdgeState.Unknown,
-            three: EdgeState.Unknown,
-            four: EdgeState.Unknown,
-            five: EdgeState.Unknown,
-            six: EdgeState.Unknown,
-            seven: EdgeState.Unknown
+        3: {
+            1: EdgeState.Unknown,
+            2: EdgeState.Unknown,
+            3: EdgeState.Unknown,
+            4: EdgeState.Unknown,
+            5: EdgeState.Unknown,
+            6: EdgeState.Unknown,
+            7: EdgeState.Unknown
           },
-        four: {
-            one: EdgeState.Unknown,
-            two: EdgeState.Unknown,
-            three: EdgeState.Unknown,
-            four: EdgeState.Unknown,
-            five: EdgeState.Unknown,
-            six: EdgeState.Unknown,
-            seven: EdgeState.Unknown
+        4: {
+            1: EdgeState.Unknown,
+            2: EdgeState.Unknown,
+            3: EdgeState.Unknown,
+            4: EdgeState.Unknown,
+            5: EdgeState.Unknown,
+            6: EdgeState.Unknown,
+            7: EdgeState.Unknown
           },
-        five: {
-            one: EdgeState.Unknown,
-            two: EdgeState.Unknown,
-            three: EdgeState.Unknown,
-            four: EdgeState.Unknown,
-            five: EdgeState.Unknown,
-            six: EdgeState.Unknown,
-            seven: EdgeState.Unknown
+        5: {
+            1: EdgeState.Unknown,
+            2: EdgeState.Unknown,
+            3: EdgeState.Unknown,
+            4: EdgeState.Unknown,
+            5: EdgeState.Unknown,
+            6: EdgeState.Unknown,
+            7: EdgeState.Unknown
           },
-        six: {
-            one: EdgeState.Unknown,
-            two: EdgeState.Unknown,
-            three: EdgeState.Unknown,
-            four: EdgeState.Unknown,
-            five: EdgeState.Unknown,
-            six: EdgeState.Unknown,
-            seven: EdgeState.Unknown
+        6: {
+            1: EdgeState.Unknown,
+            2: EdgeState.Unknown,
+            3: EdgeState.Unknown,
+            4: EdgeState.Unknown,
+            5: EdgeState.Unknown,
+            6: EdgeState.Unknown,
+            7: EdgeState.Unknown
           },
-        seven: {
-            one: EdgeState.Border,
-            two: EdgeState.Border,
-            three: EdgeState.Border,
-            four: EdgeState.Border,
-            five: EdgeState.Border,
-            six: EdgeState.Border,
-            seven: EdgeState.Border
+        7: {
+            1: EdgeState.Border,
+            2: EdgeState.Border,
+            3: EdgeState.Border,
+            4: EdgeState.Border,
+            5: EdgeState.Border,
+            6: EdgeState.Border,
+            7: EdgeState.Border
           }  
       },
       horizontal: {
-        one: {
-            one: EdgeState.Border,
-            two: EdgeState.Unknown,
-            three: EdgeState.Unknown,
-            four: EdgeState.Unknown,
-            five: EdgeState.Unknown,
-            six: EdgeState.Unknown,
-            seven: EdgeState.Border
+        1: {
+            1: EdgeState.Border,
+            2: EdgeState.Unknown,
+            3: EdgeState.Unknown,
+            4: EdgeState.Unknown,
+            5: EdgeState.Unknown,
+            6: EdgeState.Unknown,
+            7: EdgeState.Border
           },
-        two: {
-            one: EdgeState.Border,
-            two: EdgeState.Unknown,
-            three: EdgeState.Unknown,
-            four: EdgeState.Unknown,
-            five: EdgeState.Unknown,
-            six: EdgeState.Unknown,
-            seven: EdgeState.Border
+        2: {
+            1: EdgeState.Border,
+            2: EdgeState.Unknown,
+            3: EdgeState.Unknown,
+            4: EdgeState.Unknown,
+            5: EdgeState.Unknown,
+            6: EdgeState.Unknown,
+            7: EdgeState.Border
           },
-        three: {
-            one: EdgeState.Border,
-            two: EdgeState.Unknown,
-            three: EdgeState.Unknown,
-            four: EdgeState.Unknown,
-            five: EdgeState.Unknown,
-            six: EdgeState.Unknown,
-            seven: EdgeState.Border
+        3: {
+            1: EdgeState.Border,
+            2: EdgeState.Unknown,
+            3: EdgeState.Unknown,
+            4: EdgeState.Unknown,
+            5: EdgeState.Unknown,
+            6: EdgeState.Unknown,
+            7: EdgeState.Border
           },
-        four: {
-            one: EdgeState.Border,
-            two: EdgeState.Unknown,
-            three: EdgeState.Unknown,
-            four: EdgeState.Unknown,
-            five: EdgeState.Unknown,
-            six: EdgeState.Unknown,
-            seven: EdgeState.Border
+        4: {
+            1: EdgeState.Border,
+            2: EdgeState.Unknown,
+            3: EdgeState.Unknown,
+            4: EdgeState.Unknown,
+            5: EdgeState.Unknown,
+            6: EdgeState.Unknown,
+            7: EdgeState.Border
           },
-        five: {
-            one: EdgeState.Border,
-            two: EdgeState.Unknown,
-            three: EdgeState.Unknown,
-            four: EdgeState.Unknown,
-            five: EdgeState.Unknown,
-            six: EdgeState.Unknown,
-            seven: EdgeState.Border
+        5: {
+            1: EdgeState.Border,
+            2: EdgeState.Unknown,
+            3: EdgeState.Unknown,
+            4: EdgeState.Unknown,
+            5: EdgeState.Unknown,
+            6: EdgeState.Unknown,
+            7: EdgeState.Border
           },
-        six: {
-            one: EdgeState.Border,
-            two: EdgeState.Unknown,
-            three: EdgeState.Unknown,
-            four: EdgeState.Unknown,
-            five: EdgeState.Unknown,
-            six: EdgeState.Unknown,
-            seven: EdgeState.Border
+        6: {
+            1: EdgeState.Border,
+            2: EdgeState.Unknown,
+            3: EdgeState.Unknown,
+            4: EdgeState.Unknown,
+            5: EdgeState.Unknown,
+            6: EdgeState.Unknown,
+            7: EdgeState.Border
           },
-        seven: {
-            one: EdgeState.Border,
-            two: EdgeState.Unknown,
-            three: EdgeState.Unknown,
-            four: EdgeState.Unknown,
-            five: EdgeState.Unknown,
-            six: EdgeState.Unknown,
-            seven: EdgeState.Border
+        7: {
+            1: EdgeState.Border,
+            2: EdgeState.Unknown,
+            3: EdgeState.Unknown,
+            4: EdgeState.Unknown,
+            5: EdgeState.Unknown,
+            6: EdgeState.Unknown,
+            7: EdgeState.Border
           }
       }
     }
   }
 
-  edgeClick(e: MouseEvent, orientation: string, h:string, v: string){
-    switch(this.edgeModel[orientation][h][v]) {
+  edgeClick(orientation: string, h:number, v: number){
+    const sh= h.toString();
+    const sv = v.toString();
+    switch(this.gameModel[orientation][sh][sv]) {
       case EdgeState.Unknown: {
-        this.edgeModel[orientation][h][v] = EdgeState.Wall;
+        this.gameModel[orientation][sh][sv] = EdgeState.Wall;
         break;
       }
       case EdgeState.Wall:
-        this.edgeModel[orientation][h][v] = EdgeState.Unknown;
+        this.gameModel[orientation][sh][sv] = EdgeState.Unknown;
         break;
     }
   }
 
+  squareClick(h:number, v: number){
+    this.gameModel.target.horizontal = h;
+    this.gameModel.target.vertical = v;
+  }
+
+  getgameModelClassName(orientation: string, h: number, v:number):string{
+    return this.gameModel[orientation][h][v];
+  }
+
+  getCornerState(h: number, v:number): string {
+    try{
+      if(this.gameModel.horizontal[h][v] === EdgeState.Wall) { 
+        return EdgeState.Border
+      } 
+    } catch {}
+    try{
+      if(this.gameModel.horizontal[h-1][v] === EdgeState.Wall) { 
+        return EdgeState.Border
+      }
+    } catch {}
+    try{
+      if(this.gameModel.vertical[h][v] === EdgeState.Wall) { 
+        return EdgeState.Border
+      }
+    } catch {}
+    try{
+      if(this.gameModel.vertical[h][v-1] === EdgeState.Wall) { 
+        return EdgeState.Border
+      }
+    } catch {}
+    return EdgeState.Unknown;
+  }
 }
