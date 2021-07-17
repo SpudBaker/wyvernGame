@@ -1,0 +1,58 @@
+export enum EdgeState {
+    Border = 'edgeBorder',
+    Opening = 'edgeOpening',
+    Unknown = 'edgeUnknown',
+    Wall = 'edgeWall'
+  }
+  
+  export enum Orientation {
+    Horizontal = 'horizontal',
+    Vertical = 'vertical'
+  }
+  
+  export enum SquareState {
+    Unknown,
+    ReachableNotChecked,
+    ReachableChecked
+  }
+  
+  export class Piece {
+    horizontal: number;
+    vertical: number;
+    constructor(horizontal: number, vertical: number ) {
+      this.horizontal = horizontal;
+      this.vertical = vertical;
+    }
+  }
+  
+  export class GameModel {
+    horizontalEdges: EdgeState[][] = [
+      [EdgeState.Border, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Border],
+      [EdgeState.Border, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Border],
+      [EdgeState.Border, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Border],
+      [EdgeState.Border, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Border],
+      [EdgeState.Border, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Border],
+      [EdgeState.Border, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Border],
+      [EdgeState.Border, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Border]
+    ]
+    marker = new Piece(1, 1);
+    squares: SquareState[][]  = [
+      [SquareState.ReachableChecked, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown],
+      [SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown],
+      [SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown], 
+      [SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown], 
+      [SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown], 
+      [SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown], 
+    ];
+    target = new Piece(6, 6);
+    validRouteExists: boolean = false;
+    verticalEdges: EdgeState[][] = [
+      [EdgeState.Border, EdgeState.Border, EdgeState.Border, EdgeState.Border, EdgeState.Border, EdgeState.Border, EdgeState.Border],
+      [EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown],
+      [EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown],
+      [EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown],
+      [EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown],
+      [EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown],
+      [EdgeState.Border, EdgeState.Border, EdgeState.Border, EdgeState.Border, EdgeState.Border, EdgeState.Border, EdgeState.Border]
+    ]
+  }

@@ -1,5 +1,7 @@
 <br/>
-<br/><br/>
+<br/>
+<br/>
+{{gameModel.validRouteExists}}
 <div class="divOuter">
 <div class="square squareVisited squareColumn1 squareRow1"></div>
 <div (click)="squareClick(2, 1)" class="square squareUnvisited squareColumn2 squareRow1"></div>
@@ -37,120 +39,120 @@
 <div (click)="squareClick(4, 6)" class="square squareUnvisited squareColumn4 squareRow6"></div>
 <div (click)="squareClick(5, 6)" class="square squareUnvisited squareColumn5 squareRow6"></div>
 <div (click)="squareClick(6, 6)" class="square squareUnvisited squareColumn6 squareRow6"></div>
-<div (click)="edgeClick('vertical', 2, 1)" class="edge edgeVertical edgeColumn2 edgeRow1" [ngClass]="gameModel.vertical[2][1]"></div>
-<div (click)="edgeClick('vertical', 3, 1)" class="edge edgeVertical edgeColumn3 edgeRow1" [ngClass]="gameModel.vertical[3][1]"></div>
-<div (click)="edgeClick('vertical', 4, 1)" class="edge edgeVertical edgeColumn4 edgeRow1" [ngClass]="gameModel.vertical[4][1]"></div>
-<div (click)="edgeClick('vertical', 5, 1)" class="edge edgeVertical edgeColumn5 edgeRow1" [ngClass]="gameModel.vertical[5][1]"></div>
-<div (click)="edgeClick('vertical', 6, 1)" class="edge edgeVertical edgeColumn6 edgeRow1" [ngClass]="gameModel.vertical[6][1]"></div>
-<div (click)="edgeClick('vertical', 2, 2)" class="edge edgeVertical edgeColumn2 edgeRow2" [ngClass]="gameModel.vertical[2][2]"></div>
-<div (click)="edgeClick('vertical', 3, 2)" class="edge edgeVertical edgeColumn3 edgeRow2" [ngClass]="gameModel.vertical[3][2]"></div>
-<div (click)="edgeClick('vertical', 4, 2)" class="edge edgeVertical edgeColumn4 edgeRow2" [ngClass]="gameModel.vertical[4][2]"></div>
-<div (click)="edgeClick('vertical', 5, 2)" class="edge edgeVertical edgeColumn5 edgeRow2" [ngClass]="gameModel.vertical[5][2]"></div>
-<div (click)="edgeClick('vertical', 6, 2)" class="edge edgeVertical edgeColumn6 edgeRow2" [ngClass]="gameModel.vertical[6][2]"></div>
-<div (click)="edgeClick('vertical', 2, 3)" class="edge edgeVertical edgeColumn2 edgeRow3" [ngClass]="gameModel.vertical[2][3]"></div>
-<div (click)="edgeClick('vertical', 3, 3)" class="edge edgeVertical edgeColumn3 edgeRow3" [ngClass]="gameModel.vertical[3][3]"></div>
-<div (click)="edgeClick('vertical', 4, 3)" class="edge edgeVertical edgeColumn4 edgeRow3" [ngClass]="gameModel.vertical[4][3]"></div>
-<div (click)="edgeClick('vertical', 5, 3)" class="edge edgeVertical edgeColumn5 edgeRow3" [ngClass]="gameModel.vertical[5][3]"></div>
-<div (click)="edgeClick('vertical', 6, 3)" class="edge edgeVertical edgeColumn6 edgeRow3" [ngClass]="gameModel.vertical[6][3]"></div>
-<div (click)="edgeClick('vertical', 2, 4)" class="edge edgeVertical edgeColumn2 edgeRow4" [ngClass]="gameModel.vertical[2][4]"></div>
-<div (click)="edgeClick('vertical', 3, 4)" class="edge edgeVertical edgeColumn3 edgeRow4" [ngClass]="gameModel.vertical[3][4]"></div>
-<div (click)="edgeClick('vertical', 4, 4)" class="edge edgeVertical edgeColumn4 edgeRow4" [ngClass]="gameModel.vertical[4][4]"></div>
-<div (click)="edgeClick('vertical', 5, 4)" class="edge edgeVertical edgeColumn5 edgeRow4" [ngClass]="gameModel.vertical[5][4]"></div>
-<div (click)="edgeClick('vertical', 6, 4)" class="edge edgeVertical edgeColumn6 edgeRow4" [ngClass]="gameModel.vertical[6][4]"></div>
-<div (click)="edgeClick('vertical', 2, 5)" class="edge edgeVertical edgeColumn2 edgeRow5" [ngClass]="gameModel.vertical[2][5]"></div>
-<div (click)="edgeClick('vertical', 3, 5)" class="edge edgeVertical edgeColumn3 edgeRow5" [ngClass]="gameModel.vertical[3][5]"></div>
-<div (click)="edgeClick('vertical', 4, 5)" class="edge edgeVertical edgeColumn4 edgeRow5" [ngClass]="gameModel.vertical[4][5]"></div>
-<div (click)="edgeClick('vertical', 5, 5)" class="edge edgeVertical edgeColumn5 edgeRow5" [ngClass]="gameModel.vertical[5][5]"></div>
-<div (click)="edgeClick('vertical', 6, 5)" class="edge edgeVertical edgeColumn6 edgeRow5" [ngClass]="gameModel.vertical[6][5]"></div>
-<div (click)="edgeClick('vertical', 2, 6)" class="edge edgeVertical edgeColumn2 edgeRow6" [ngClass]="gameModel.vertical[2][6]"></div>
-<div (click)="edgeClick('vertical', 3, 6)" class="edge edgeVertical edgeColumn3 edgeRow6" [ngClass]="gameModel.vertical[3][6]"></div>
-<div (click)="edgeClick('vertical', 4, 6)" class="edge edgeVertical edgeColumn4 edgeRow6" [ngClass]="gameModel.vertical[4][6]"></div>
-<div (click)="edgeClick('vertical', 5, 6)" class="edge edgeVertical edgeColumn5 edgeRow6" [ngClass]="gameModel.vertical[5][6]"></div>
-<div (click)="edgeClick('vertical', 6, 6)" class="edge edgeVertical edgeColumn6 edgeRow6" [ngClass]="gameModel.vertical[6][6]"></div>
-<div (click)="edgeClick('horizontal', 1, 2)" class="edge edgeHorizontal edgeColumn1 edgeRow2" [ngClass]="gameModel.horizontal[1][2]"></div>
-<div (click)="edgeClick('horizontal', 2, 2)" class="edge edgeHorizontal edgeColumn2 edgeRow2" [ngClass]="gameModel.horizontal[2][2]"></div>
-<div (click)="edgeClick('horizontal', 3, 2)" class="edge edgeHorizontal edgeColumn3 edgeRow2" [ngClass]="gameModel.horizontal[3][2]"></div>
-<div (click)="edgeClick('horizontal', 4, 2)" class="edge edgeHorizontal edgeColumn4 edgeRow2" [ngClass]="gameModel.horizontal[4][2]"></div>
-<div (click)="edgeClick('horizontal', 5, 2)" class="edge edgeHorizontal edgeColumn5 edgeRow2" [ngClass]="gameModel.horizontal[5][2]"></div>
-<div (click)="edgeClick('horizontal', 6, 2)" class="edge edgeHorizontal edgeColumn6 edgeRow2" [ngClass]="gameModel.horizontal[6][2]"></div>
-<div (click)="edgeClick('horizontal', 1, 3)" class="edge edgeHorizontal edgeColumn1 edgeRow3" [ngClass]="gameModel.horizontal[1][3]"></div>
-<div (click)="edgeClick('horizontal', 2, 3)" class="edge edgeHorizontal edgeColumn2 edgeRow3" [ngClass]="gameModel.horizontal[2][3]"></div>
-<div (click)="edgeClick('horizontal', 3, 3)" class="edge edgeHorizontal edgeColumn3 edgeRow3" [ngClass]="gameModel.horizontal[3][3]"></div>
-<div (click)="edgeClick('horizontal', 4, 3)" class="edge edgeHorizontal edgeColumn4 edgeRow3" [ngClass]="gameModel.horizontal[4][3]"></div>
-<div (click)="edgeClick('horizontal', 5, 3)" class="edge edgeHorizontal edgeColumn5 edgeRow3" [ngClass]="gameModel.horizontal[5][3]"></div>
-<div (click)="edgeClick('horizontal', 6, 3)" class="edge edgeHorizontal edgeColumn6 edgeRow3" [ngClass]="gameModel.horizontal[6][3]"></div>
-<div (click)="edgeClick('horizontal', 1, 4)" class="edge edgeHorizontal edgeColumn1 edgeRow4" [ngClass]="gameModel.horizontal[1][4]"></div>
-<div (click)="edgeClick('horizontal', 2, 4)" class="edge edgeHorizontal edgeColumn2 edgeRow4" [ngClass]="gameModel.horizontal[2][4]"></div>
-<div (click)="edgeClick('horizontal', 3, 4)" class="edge edgeHorizontal edgeColumn3 edgeRow4" [ngClass]="gameModel.horizontal[3][4]"></div>
-<div (click)="edgeClick('horizontal', 4, 4)" class="edge edgeHorizontal edgeColumn4 edgeRow4" [ngClass]="gameModel.horizontal[4][4]"></div>
-<div (click)="edgeClick('horizontal', 5, 4)" class="edge edgeHorizontal edgeColumn5 edgeRow4" [ngClass]="gameModel.horizontal[5][4]"></div>
-<div (click)="edgeClick('horizontal', 6, 4)" class="edge edgeHorizontal edgeColumn6 edgeRow4" [ngClass]="gameModel.horizontal[6][4]"></div>
-<div (click)="edgeClick('horizontal', 1, 5)" class="edge edgeHorizontal edgeColumn1 edgeRow5" [ngClass]="gameModel.horizontal[1][5]"></div>
-<div (click)="edgeClick('horizontal', 2, 5)" class="edge edgeHorizontal edgeColumn2 edgeRow5" [ngClass]="gameModel.horizontal[2][5]"></div>
-<div (click)="edgeClick('horizontal', 3, 5)" class="edge edgeHorizontal edgeColumn3 edgeRow5" [ngClass]="gameModel.horizontal[3][5]"></div>
-<div (click)="edgeClick('horizontal', 4, 5)" class="edge edgeHorizontal edgeColumn4 edgeRow5" [ngClass]="gameModel.horizontal[4][5]"></div>
-<div (click)="edgeClick('horizontal', 5, 5)" class="edge edgeHorizontal edgeColumn5 edgeRow5" [ngClass]="gameModel.horizontal[5][5]"></div>
-<div (click)="edgeClick('horizontal', 6, 5)" class="edge edgeHorizontal edgeColumn6 edgeRow5" [ngClass]="gameModel.horizontal[6][5]"></div>
-<div (click)="edgeClick('horizontal', 1, 6)" class="edge edgeHorizontal edgeColumn1 edgeRow6" [ngClass]="gameModel.horizontal[1][6]"></div>
-<div (click)="edgeClick('horizontal', 2, 6)" class="edge edgeHorizontal edgeColumn2 edgeRow6" [ngClass]="gameModel.horizontal[2][6]"></div>
-<div (click)="edgeClick('horizontal', 3, 6)" class="edge edgeHorizontal edgeColumn3 edgeRow6" [ngClass]="gameModel.horizontal[3][6]"></div>
-<div (click)="edgeClick('horizontal', 4, 6)" class="edge edgeHorizontal edgeColumn4 edgeRow6" [ngClass]="gameModel.horizontal[4][6]"></div>
-<div (click)="edgeClick('horizontal', 5, 6)" class="edge edgeHorizontal edgeColumn5 edgeRow6" [ngClass]="gameModel.horizontal[5][6]"></div>
-<div (click)="edgeClick('horizontal', 6, 6)" class="edge edgeHorizontal edgeColumn6 edgeRow6" [ngClass]="gameModel.horizontal[6][6]"></div>
-<div class="edge edgeBorderHorizontal edgeColumn1 edgeRow1" [ngClass]="gameModel.horizontal[1][1]"></div>
-<div class="edge edgeBorderHorizontal edgeColumn2 edgeRow1" [ngClass]="gameModel.horizontal[2][1]"></div>
-<div class="edge edgeBorderHorizontal edgeColumn3 edgeRow1" [ngClass]="gameModel.horizontal[3][1]"></div>
-<div class="edge edgeBorderHorizontal edgeColumn4 edgeRow1" [ngClass]="gameModel.horizontal[4][1]"></div>
-<div class="edge edgeBorderHorizontal edgeColumn5 edgeRow1" [ngClass]="gameModel.horizontal[5][1]"></div>
-<div class="edge edgeBorderHorizontal edgeColumn6 edgeRow1" [ngClass]="gameModel.horizontal[6][1]"></div>
-<div class="edge edgeBorderHorizontal edgeColumn1 edgeRow7" [ngClass]="gameModel.horizontal[1][7]"></div>
-<div class="edge edgeBorderHorizontal edgeColumn2 edgeRow7" [ngClass]="gameModel.horizontal[2][7]"></div>
-<div class="edge edgeBorderHorizontal edgeColumn3 edgeRow7" [ngClass]="gameModel.horizontal[3][7]"></div>
-<div class="edge edgeBorderHorizontal edgeColumn4 edgeRow7" [ngClass]="gameModel.horizontal[4][7]"></div>
-<div class="edge edgeBorderHorizontal edgeColumn5 edgeRow7" [ngClass]="gameModel.horizontal[5][7]"></div>
-<div class="edge edgeBorderHorizontal edgeColumn6 edgeRow7" [ngClass]="gameModel.horizontal[6][7]"></div>
-<div class="edge edgeBorderVertical edgeColumn1 edgeRow1" [ngClass]="gameModel.vertical[1][1]"></div>
-<div class="edge edgeBorderVertical edgeColumn7 edgeRow1" [ngClass]="gameModel.vertical[7][1]"></div>
-<div class="edge edgeBorderVertical edgeColumn1 edgeRow2" [ngClass]="gameModel.vertical[1][2]"></div>
-<div class="edge edgeBorderVertical edgeColumn7 edgeRow2" [ngClass]="gameModel.vertical[7][2]"></div>
-<div class="edge edgeBorderVertical edgeColumn1 edgeRow3" [ngClass]="gameModel.vertical[1][3]"></div>
-<div class="edge edgeBorderVertical edgeColumn7 edgeRow3" [ngClass]="gameModel.vertical[7][3]"></div>
-<div class="edge edgeBorderVertical edgeColumn1 edgeRow4" [ngClass]="gameModel.vertical[1][4]"></div>
-<div class="edge edgeBorderVertical edgeColumn7 edgeRow4" [ngClass]="gameModel.vertical[7][4]"></div>
-<div class="edge edgeBorderVertical edgeColumn1 edgeRow5" [ngClass]="gameModel.vertical[1][5]"></div>
-<div class="edge edgeBorderVertical edgeColumn7 edgeRow5" [ngClass]="gameModel.vertical[7][5]"></div>
-<div class="edge edgeBorderVertical edgeColumn1 edgeRow6" [ngClass]="gameModel.vertical[1][6]"></div>
-<div class="edge edgeBorderVertical edgeColumn7 edgeRow6" [ngClass]="gameModel.vertical[7][6]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 1, 0)" class="edge edgeVertical edgeColumn2 edgeRow1" [ngClass]="gameModel.verticalEdges[1][0]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 2, 0)" class="edge edgeVertical edgeColumn3 edgeRow1" [ngClass]="gameModel.verticalEdges[2][0]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 3, 0)" class="edge edgeVertical edgeColumn4 edgeRow1" [ngClass]="gameModel.verticalEdges[3][0]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 4, 0)" class="edge edgeVertical edgeColumn5 edgeRow1" [ngClass]="gameModel.verticalEdges[4][0]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 5, 0)" class="edge edgeVertical edgeColumn6 edgeRow1" [ngClass]="gameModel.verticalEdges[5][0]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 1, 1)" class="edge edgeVertical edgeColumn2 edgeRow2" [ngClass]="gameModel.verticalEdges[1][1]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 2, 1)" class="edge edgeVertical edgeColumn3 edgeRow2" [ngClass]="gameModel.verticalEdges[2][1]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 3, 1)" class="edge edgeVertical edgeColumn4 edgeRow2" [ngClass]="gameModel.verticalEdges[3][1]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 4, 1)" class="edge edgeVertical edgeColumn5 edgeRow2" [ngClass]="gameModel.verticalEdges[4][1]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 5, 1)" class="edge edgeVertical edgeColumn6 edgeRow2" [ngClass]="gameModel.verticalEdges[5][1]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 1, 2)" class="edge edgeVertical edgeColumn2 edgeRow3" [ngClass]="gameModel.verticalEdges[1][2]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 2, 2)" class="edge edgeVertical edgeColumn3 edgeRow3" [ngClass]="gameModel.verticalEdges[2][2]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 3, 2)" class="edge edgeVertical edgeColumn4 edgeRow3" [ngClass]="gameModel.verticalEdges[3][2]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 4, 2)" class="edge edgeVertical edgeColumn5 edgeRow3" [ngClass]="gameModel.verticalEdges[4][2]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 5, 2)" class="edge edgeVertical edgeColumn6 edgeRow3" [ngClass]="gameModel.verticalEdges[5][2]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 1, 3)" class="edge edgeVertical edgeColumn2 edgeRow4" [ngClass]="gameModel.verticalEdges[1][3]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 2, 3)" class="edge edgeVertical edgeColumn3 edgeRow4" [ngClass]="gameModel.verticalEdges[2][3]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 3, 3)" class="edge edgeVertical edgeColumn4 edgeRow4" [ngClass]="gameModel.verticalEdges[3][3]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 4, 3)" class="edge edgeVertical edgeColumn5 edgeRow4" [ngClass]="gameModel.verticalEdges[4][3]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 5, 3)" class="edge edgeVertical edgeColumn6 edgeRow4" [ngClass]="gameModel.verticalEdges[5][3]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 1, 4)" class="edge edgeVertical edgeColumn2 edgeRow5" [ngClass]="gameModel.verticalEdges[1][4]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 2, 4)" class="edge edgeVertical edgeColumn3 edgeRow5" [ngClass]="gameModel.verticalEdges[2][4]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 3, 4)" class="edge edgeVertical edgeColumn4 edgeRow5" [ngClass]="gameModel.verticalEdges[3][4]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 4, 4)" class="edge edgeVertical edgeColumn5 edgeRow5" [ngClass]="gameModel.verticalEdges[4][4]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 5, 4)" class="edge edgeVertical edgeColumn6 edgeRow5" [ngClass]="gameModel.verticalEdges[5][4]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 1, 5)" class="edge edgeVertical edgeColumn2 edgeRow6" [ngClass]="gameModel.verticalEdges[1][5]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 2, 5)" class="edge edgeVertical edgeColumn3 edgeRow6" [ngClass]="gameModel.verticalEdges[2][5]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 3, 5)" class="edge edgeVertical edgeColumn4 edgeRow6" [ngClass]="gameModel.verticalEdges[3][5]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 4, 5)" class="edge edgeVertical edgeColumn5 edgeRow6" [ngClass]="gameModel.verticalEdges[4][5]"></div>
+<div (click)="edgeClick(Orientation.Vertical, 5, 5)" class="edge edgeVertical edgeColumn6 edgeRow6" [ngClass]="gameModel.verticalEdges[5][5]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 0, 1)" class="edge edgeHorizontal edgeColumn1 edgeRow2" [ngClass]="gameModel.horizontalEdges[0][1]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 1, 1)" class="edge edgeHorizontal edgeColumn2 edgeRow2" [ngClass]="gameModel.horizontalEdges[1][1]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 2, 1)" class="edge edgeHorizontal edgeColumn3 edgeRow2" [ngClass]="gameModel.horizontalEdges[2][1]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 3, 1)" class="edge edgeHorizontal edgeColumn4 edgeRow2" [ngClass]="gameModel.horizontalEdges[3][1]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 4, 1)" class="edge edgeHorizontal edgeColumn5 edgeRow2" [ngClass]="gameModel.horizontalEdges[4][1]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 5, 1)" class="edge edgeHorizontal edgeColumn6 edgeRow2" [ngClass]="gameModel.horizontalEdges[5][1]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 0, 2)" class="edge edgeHorizontal edgeColumn1 edgeRow3" [ngClass]="gameModel.horizontalEdges[0][2]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 1, 2)" class="edge edgeHorizontal edgeColumn2 edgeRow3" [ngClass]="gameModel.horizontalEdges[1][2]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 2, 2)" class="edge edgeHorizontal edgeColumn3 edgeRow3" [ngClass]="gameModel.horizontalEdges[2][2]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 3, 2)" class="edge edgeHorizontal edgeColumn4 edgeRow3" [ngClass]="gameModel.horizontalEdges[3][2]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 4, 2)" class="edge edgeHorizontal edgeColumn5 edgeRow3" [ngClass]="gameModel.horizontalEdges[4][2]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 5, 2)" class="edge edgeHorizontal edgeColumn6 edgeRow3" [ngClass]="gameModel.horizontalEdges[5][2]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 0, 3)" class="edge edgeHorizontal edgeColumn1 edgeRow4" [ngClass]="gameModel.horizontalEdges[0][3]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 1, 3)" class="edge edgeHorizontal edgeColumn2 edgeRow4" [ngClass]="gameModel.horizontalEdges[1][3]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 2, 3)" class="edge edgeHorizontal edgeColumn3 edgeRow4" [ngClass]="gameModel.horizontalEdges[2][3]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 3, 3)" class="edge edgeHorizontal edgeColumn4 edgeRow4" [ngClass]="gameModel.horizontalEdges[3][3]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 4, 3)" class="edge edgeHorizontal edgeColumn5 edgeRow4" [ngClass]="gameModel.horizontalEdges[4][3]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 5, 3)" class="edge edgeHorizontal edgeColumn6 edgeRow4" [ngClass]="gameModel.horizontalEdges[5][3]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 0, 4)" class="edge edgeHorizontal edgeColumn1 edgeRow5" [ngClass]="gameModel.horizontalEdges[0][4]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 1, 4)" class="edge edgeHorizontal edgeColumn2 edgeRow5" [ngClass]="gameModel.horizontalEdges[1][4]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 2, 4)" class="edge edgeHorizontal edgeColumn3 edgeRow5" [ngClass]="gameModel.horizontalEdges[2][4]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 3, 4)" class="edge edgeHorizontal edgeColumn4 edgeRow5" [ngClass]="gameModel.horizontalEdges[3][4]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 4, 4)" class="edge edgeHorizontal edgeColumn5 edgeRow5" [ngClass]="gameModel.horizontalEdges[4][4]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 5, 4)" class="edge edgeHorizontal edgeColumn6 edgeRow5" [ngClass]="gameModel.horizontalEdges[5][4]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 0, 5)" class="edge edgeHorizontal edgeColumn1 edgeRow6" [ngClass]="gameModel.horizontalEdges[0][5]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 1, 5)" class="edge edgeHorizontal edgeColumn2 edgeRow6" [ngClass]="gameModel.horizontalEdges[1][5]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 2, 5)" class="edge edgeHorizontal edgeColumn3 edgeRow6" [ngClass]="gameModel.horizontalEdges[2][5]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 3, 5)" class="edge edgeHorizontal edgeColumn4 edgeRow6" [ngClass]="gameModel.horizontalEdges[3][5]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 4, 5)" class="edge edgeHorizontal edgeColumn5 edgeRow6" [ngClass]="gameModel.horizontalEdges[4][5]"></div>
+<div (click)="edgeClick(Orientation.Horizontal, 5, 5)" class="edge edgeHorizontal edgeColumn6 edgeRow6" [ngClass]="gameModel.horizontalEdges[5][5]"></div>
+<div class="edge edgeBorderHorizontal edgeColumn1 edgeRow1" [ngClass]="gameModel.horizontalEdges[0][0]"></div>
+<div class="edge edgeBorderHorizontal edgeColumn2 edgeRow1" [ngClass]="gameModel.horizontalEdges[1][0]"></div>
+<div class="edge edgeBorderHorizontal edgeColumn3 edgeRow1" [ngClass]="gameModel.horizontalEdges[2][0]"></div>
+<div class="edge edgeBorderHorizontal edgeColumn4 edgeRow1" [ngClass]="gameModel.horizontalEdges[3][0]"></div>
+<div class="edge edgeBorderHorizontal edgeColumn5 edgeRow1" [ngClass]="gameModel.horizontalEdges[4][0]"></div>
+<div class="edge edgeBorderHorizontal edgeColumn6 edgeRow1" [ngClass]="gameModel.horizontalEdges[5][0]"></div>
+<div class="edge edgeBorderHorizontal edgeColumn1 edgeRow7" [ngClass]="gameModel.horizontalEdges[0][6]"></div>
+<div class="edge edgeBorderHorizontal edgeColumn2 edgeRow7" [ngClass]="gameModel.horizontalEdges[1][6]"></div>
+<div class="edge edgeBorderHorizontal edgeColumn3 edgeRow7" [ngClass]="gameModel.horizontalEdges[2][6]"></div>
+<div class="edge edgeBorderHorizontal edgeColumn4 edgeRow7" [ngClass]="gameModel.horizontalEdges[3][6]"></div>
+<div class="edge edgeBorderHorizontal edgeColumn5 edgeRow7" [ngClass]="gameModel.horizontalEdges[4][6]"></div>
+<div class="edge edgeBorderHorizontal edgeColumn6 edgeRow7" [ngClass]="gameModel.horizontalEdges[5][6]"></div>
+<div class="edge edgeBorderVertical edgeColumn1 edgeRow1" [ngClass]="gameModel.verticalEdges[0][0]"></div>
+<div class="edge edgeBorderVertical edgeColumn7 edgeRow1" [ngClass]="gameModel.verticalEdges[6][0]"></div>
+<div class="edge edgeBorderVertical edgeColumn1 edgeRow2" [ngClass]="gameModel.verticalEdges[0][1]"></div>
+<div class="edge edgeBorderVertical edgeColumn7 edgeRow2" [ngClass]="gameModel.verticalEdges[6][1]"></div>
+<div class="edge edgeBorderVertical edgeColumn1 edgeRow3" [ngClass]="gameModel.verticalEdges[0][2]"></div>
+<div class="edge edgeBorderVertical edgeColumn7 edgeRow3" [ngClass]="gameModel.verticalEdges[6][2]"></div>
+<div class="edge edgeBorderVertical edgeColumn1 edgeRow4" [ngClass]="gameModel.verticalEdges[0][3]"></div>
+<div class="edge edgeBorderVertical edgeColumn7 edgeRow4" [ngClass]="gameModel.verticalEdges[6][3]"></div>
+<div class="edge edgeBorderVertical edgeColumn1 edgeRow5" [ngClass]="gameModel.verticalEdges[0][4]"></div>
+<div class="edge edgeBorderVertical edgeColumn7 edgeRow5" [ngClass]="gameModel.verticalEdges[6][4]"></div>
+<div class="edge edgeBorderVertical edgeColumn1 edgeRow6" [ngClass]="gameModel.verticalEdges[0][5]"></div>
+<div class="edge edgeBorderVertical edgeColumn7 edgeRow6" [ngClass]="gameModel.verticalEdges[6][5]"></div>
 
-<div class="corner edgeColumn2 edgeRow2" [ngClass]="getCornerState(2,2)"></div>
-<div class="corner edgeColumn3 edgeRow2" [ngClass]="getCornerState(3,2)"></div>
-<div class="corner edgeColumn4 edgeRow2" [ngClass]="getCornerState(4,2)"></div>
-<div class="corner edgeColumn5 edgeRow2" [ngClass]="getCornerState(5,2)"></div>
-<div class="corner edgeColumn6 edgeRow2" [ngClass]="getCornerState(6,2)"></div>
+<div class="corner edgeColumn2 edgeRow2" [ngClass]="getCornerState(1,1)"></div>
+<div class="corner edgeColumn3 edgeRow2" [ngClass]="getCornerState(2,1)"></div>
+<div class="corner edgeColumn4 edgeRow2" [ngClass]="getCornerState(3,1)"></div>
+<div class="corner edgeColumn5 edgeRow2" [ngClass]="getCornerState(4,1)"></div>
+<div class="corner edgeColumn6 edgeRow2" [ngClass]="getCornerState(5,1)"></div>
 
-<div class="corner edgeColumn2 edgeRow3" [ngClass]="getCornerState(2,3)"></div>
-<div class="corner edgeColumn3 edgeRow3" [ngClass]="getCornerState(3,3)"></div>
-<div class="corner edgeColumn4 edgeRow3" [ngClass]="getCornerState(4,3)"></div>
-<div class="corner edgeColumn5 edgeRow3" [ngClass]="getCornerState(5,3)"></div>
-<div class="corner edgeColumn6 edgeRow3" [ngClass]="getCornerState(6,3)"></div>
+<div class="corner edgeColumn2 edgeRow3" [ngClass]="getCornerState(1,2)"></div>
+<div class="corner edgeColumn3 edgeRow3" [ngClass]="getCornerState(2,2)"></div>
+<div class="corner edgeColumn4 edgeRow3" [ngClass]="getCornerState(3,2)"></div>
+<div class="corner edgeColumn5 edgeRow3" [ngClass]="getCornerState(4,2)"></div>
+<div class="corner edgeColumn6 edgeRow3" [ngClass]="getCornerState(5,2)"></div>
 
-<div class="corner edgeColumn2 edgeRow4" [ngClass]="getCornerState(2,4)"></div>
-<div class="corner edgeColumn3 edgeRow4" [ngClass]="getCornerState(3,4)"></div>
-<div class="corner edgeColumn4 edgeRow4" [ngClass]="getCornerState(4,4)"></div>
-<div class="corner edgeColumn5 edgeRow4" [ngClass]="getCornerState(5,4)"></div>
-<div class="corner edgeColumn6 edgeRow4" [ngClass]="getCornerState(6,4)"></div>
+<div class="corner edgeColumn2 edgeRow4" [ngClass]="getCornerState(1,3)"></div>
+<div class="corner edgeColumn3 edgeRow4" [ngClass]="getCornerState(2,3)"></div>
+<div class="corner edgeColumn4 edgeRow4" [ngClass]="getCornerState(3,3)"></div>
+<div class="corner edgeColumn5 edgeRow4" [ngClass]="getCornerState(4,3)"></div>
+<div class="corner edgeColumn6 edgeRow4" [ngClass]="getCornerState(5,3)"></div>
 
-<div class="corner edgeColumn2 edgeRow5" [ngClass]="getCornerState(2,5)"></div>
-<div class="corner edgeColumn3 edgeRow5" [ngClass]="getCornerState(3,5)"></div>
-<div class="corner edgeColumn4 edgeRow5" [ngClass]="getCornerState(4,5)"></div>
-<div class="corner edgeColumn5 edgeRow5" [ngClass]="getCornerState(5,5)"></div>
-<div class="corner edgeColumn6 edgeRow5" [ngClass]="getCornerState(6,5)"></div>
+<div class="corner edgeColumn2 edgeRow5" [ngClass]="getCornerState(1,4)"></div>
+<div class="corner edgeColumn3 edgeRow5" [ngClass]="getCornerState(2,4)"></div>
+<div class="corner edgeColumn4 edgeRow5" [ngClass]="getCornerState(3,4)"></div>
+<div class="corner edgeColumn5 edgeRow5" [ngClass]="getCornerState(4,4)"></div>
+<div class="corner edgeColumn6 edgeRow5" [ngClass]="getCornerState(5,4)"></div>
 
-<div class="corner edgeColumn2 edgeRow6" [ngClass]="getCornerState(2,6)"></div>
-<div class="corner edgeColumn3 edgeRow6" [ngClass]="getCornerState(3,6)"></div>
-<div class="corner edgeColumn4 edgeRow6" [ngClass]="getCornerState(4,6)"></div>
-<div class="corner edgeColumn5 edgeRow6" [ngClass]="getCornerState(5,6)"></div>
-<div class="corner edgeColumn6 edgeRow6" [ngClass]="getCornerState(6,6)"></div>
+<div class="corner edgeColumn2 edgeRow6" [ngClass]="getCornerState(1,5)"></div>
+<div class="corner edgeColumn3 edgeRow6" [ngClass]="getCornerState(2,5)"></div>
+<div class="corner edgeColumn4 edgeRow6" [ngClass]="getCornerState(3,5)"></div>
+<div class="corner edgeColumn5 edgeRow6" [ngClass]="getCornerState(4,5)"></div>
+<div class="corner edgeColumn6 edgeRow6" [ngClass]="getCornerState(5,5)"></div>
 
 <div class="marker" [ngClass]="'pieceColumn' + gameModel.marker.horizontal + ' pieceRow' + gameModel.marker.vertical"></div>
 <div class="target" [ngClass]="'pieceColumn' + gameModel.target.horizontal + ' pieceRow' + gameModel.target.vertical"></div>

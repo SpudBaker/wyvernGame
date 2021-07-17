@@ -1,16 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import * as Globals from '../../globals';
 
-enum EdgeState {
-  Border = 'edgeBorder',
-  Opening = 'edgeOpening',
-  Unknown = 'edgeUnknown',
-  Wall = 'edgeWall'
-}
 
-enum EdgeType {
-  Horizontal = 'Horizontal',
-  Vertical = 'Vertical'
-}
 
 @Component({
   selector: 'app-landing-page',
@@ -18,199 +9,94 @@ enum EdgeType {
   styleUrls: ['./landing-page.component.scss']
 })
 
-export class LandingPageComponent implements OnInit {
+export class LandingPageComponent {
 
-  gameModel : any;
+  public EdgeState = Globals.EdgeState;
+  public gameModel = new Globals.GameModel();
+  public Orientation = Globals.Orientation;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-    this.gameModel = {
-      marker: {
-        horizontal: 1,
-        vertical: 1
-      },
-      target: {
-        horizontal: 6,
-        vertical: 6
-      },
-      vertical: {
-        '1': {
-            '1': EdgeState.Border,
-            '2': EdgeState.Border,
-            '3': EdgeState.Border,
-            '4': EdgeState.Border,
-            '5': EdgeState.Border,
-            '6': EdgeState.Border,
-            '7': EdgeState.Border
-          },
-        2: {
-            1: EdgeState.Unknown,
-            2: EdgeState.Unknown,
-            3: EdgeState.Unknown,
-            4: EdgeState.Unknown,
-            5: EdgeState.Unknown,
-            6: EdgeState.Unknown,
-            7: EdgeState.Unknown
-          },
-        3: {
-            1: EdgeState.Unknown,
-            2: EdgeState.Unknown,
-            3: EdgeState.Unknown,
-            4: EdgeState.Unknown,
-            5: EdgeState.Unknown,
-            6: EdgeState.Unknown,
-            7: EdgeState.Unknown
-          },
-        4: {
-            1: EdgeState.Unknown,
-            2: EdgeState.Unknown,
-            3: EdgeState.Unknown,
-            4: EdgeState.Unknown,
-            5: EdgeState.Unknown,
-            6: EdgeState.Unknown,
-            7: EdgeState.Unknown
-          },
-        5: {
-            1: EdgeState.Unknown,
-            2: EdgeState.Unknown,
-            3: EdgeState.Unknown,
-            4: EdgeState.Unknown,
-            5: EdgeState.Unknown,
-            6: EdgeState.Unknown,
-            7: EdgeState.Unknown
-          },
-        6: {
-            1: EdgeState.Unknown,
-            2: EdgeState.Unknown,
-            3: EdgeState.Unknown,
-            4: EdgeState.Unknown,
-            5: EdgeState.Unknown,
-            6: EdgeState.Unknown,
-            7: EdgeState.Unknown
-          },
-        7: {
-            1: EdgeState.Border,
-            2: EdgeState.Border,
-            3: EdgeState.Border,
-            4: EdgeState.Border,
-            5: EdgeState.Border,
-            6: EdgeState.Border,
-            7: EdgeState.Border
-          }  
-      },
-      horizontal: {
-        1: {
-            1: EdgeState.Border,
-            2: EdgeState.Unknown,
-            3: EdgeState.Unknown,
-            4: EdgeState.Unknown,
-            5: EdgeState.Unknown,
-            6: EdgeState.Unknown,
-            7: EdgeState.Border
-          },
-        2: {
-            1: EdgeState.Border,
-            2: EdgeState.Unknown,
-            3: EdgeState.Unknown,
-            4: EdgeState.Unknown,
-            5: EdgeState.Unknown,
-            6: EdgeState.Unknown,
-            7: EdgeState.Border
-          },
-        3: {
-            1: EdgeState.Border,
-            2: EdgeState.Unknown,
-            3: EdgeState.Unknown,
-            4: EdgeState.Unknown,
-            5: EdgeState.Unknown,
-            6: EdgeState.Unknown,
-            7: EdgeState.Border
-          },
-        4: {
-            1: EdgeState.Border,
-            2: EdgeState.Unknown,
-            3: EdgeState.Unknown,
-            4: EdgeState.Unknown,
-            5: EdgeState.Unknown,
-            6: EdgeState.Unknown,
-            7: EdgeState.Border
-          },
-        5: {
-            1: EdgeState.Border,
-            2: EdgeState.Unknown,
-            3: EdgeState.Unknown,
-            4: EdgeState.Unknown,
-            5: EdgeState.Unknown,
-            6: EdgeState.Unknown,
-            7: EdgeState.Border
-          },
-        6: {
-            1: EdgeState.Border,
-            2: EdgeState.Unknown,
-            3: EdgeState.Unknown,
-            4: EdgeState.Unknown,
-            5: EdgeState.Unknown,
-            6: EdgeState.Unknown,
-            7: EdgeState.Border
-          },
-        7: {
-            1: EdgeState.Border,
-            2: EdgeState.Unknown,
-            3: EdgeState.Unknown,
-            4: EdgeState.Unknown,
-            5: EdgeState.Unknown,
-            6: EdgeState.Unknown,
-            7: EdgeState.Border
+  edgeClick(orientation: Globals.Orientation, h:number, v: number){
+    switch (orientation){
+      case this.Orientation.Horizontal: {
+        switch(this.gameModel.horizontalEdges[h][v]) {
+          case this.EdgeState.Unknown: {
+            this.gameModel.horizontalEdges[h][v] = this.EdgeState.Wall;
+            this.checkIfValidRouteExists();
+            break;
           }
-      }
-    }
-  }
-
-  edgeClick(orientation: string, h:number, v: number){
-    const sh= h.toString();
-    const sv = v.toString();
-    switch(this.gameModel[orientation][sh][sv]) {
-      case EdgeState.Unknown: {
-        this.gameModel[orientation][sh][sv] = EdgeState.Wall;
+          case this.EdgeState.Wall:
+            this.gameModel.horizontalEdges[h][v] = this.EdgeState.Unknown;
+            this.checkIfValidRouteExists();
+            break;
+          }
+        }
+        break;
+      case this.Orientation.Vertical:{
+        switch(this.gameModel.verticalEdges[h][v]) {
+          case this.EdgeState.Unknown: {
+            this.gameModel.verticalEdges[h][v] = this.EdgeState.Wall;
+            this.checkIfValidRouteExists();
+            break;
+          }
+          case Globals.EdgeState.Wall:
+            this.gameModel.verticalEdges[h][v] = this.EdgeState.Unknown;
+            this.checkIfValidRouteExists();
+            break;
+          }
+        }
         break;
       }
-      case EdgeState.Wall:
-        this.gameModel[orientation][sh][sv] = EdgeState.Unknown;
-        break;
-    }
   }
 
   squareClick(h:number, v: number){
     this.gameModel.target.horizontal = h;
     this.gameModel.target.vertical = v;
-  }
-
-  getgameModelClassName(orientation: string, h: number, v:number):string{
-    return this.gameModel[orientation][h][v];
+    this.checkIfValidRouteExists();
   }
 
   getCornerState(h: number, v:number): string {
     try{
-      if(this.gameModel.horizontal[h][v] === EdgeState.Wall) { 
-        return EdgeState.Border
+      if(this.gameModel.horizontalEdges[h][v] === this.EdgeState.Wall) { 
+        return Globals.EdgeState.Border
       } 
     } catch {}
     try{
-      if(this.gameModel.horizontal[h-1][v] === EdgeState.Wall) { 
-        return EdgeState.Border
+      if(this.gameModel.horizontalEdges[h-1][v] === this.EdgeState.Wall) { 
+        return Globals.EdgeState.Border
       }
     } catch {}
     try{
-      if(this.gameModel.vertical[h][v] === EdgeState.Wall) { 
-        return EdgeState.Border
+      if(this.gameModel.verticalEdges[h][v] === this.EdgeState.Wall) { 
+        return Globals.EdgeState.Border
       }
     } catch {}
     try{
-      if(this.gameModel.vertical[h][v-1] === EdgeState.Wall) { 
-        return EdgeState.Border
+      if(this.gameModel.verticalEdges[h][v-1] === this.EdgeState.Wall) { 
+        return Globals.EdgeState.Border
       }
     } catch {}
-    return EdgeState.Unknown;
+    return Globals.EdgeState.Unknown;
   }
+
+  checkIfValidRouteExists(){
+   
+    let count = 1;
+
+    while (count > 0) {
+      count =0;
+      // squares.filter(element => element.state === SquareState.reachableNotChecked);
+      // squares.forEach(element => {
+        if (this.gameModel){
+        // has it got the target? - if so exit and mark status as true
+        // mark as reachable checked
+        // find adjacent squares and mark as reachableNotChecked if appropriate
+        // keep track of how many squares are marked, if none update 'changes' variable 
+        }; 
+    }
+
+
+  }
+
 }
