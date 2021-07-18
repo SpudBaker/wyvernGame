@@ -16,40 +16,40 @@
 .squareVisited {
     background-color: lightgrey;
 }
-.squareColumn1{
+.squareColumn0{
     left: 5%;
 }
-.squareColumn2{
+.squareColumn1{
     left: 20%;
 }
-.squareColumn3{
+.squareColumn2{
     left: 35%;
 }
-.squareColumn4{
+.squareColumn3{
     left: 50%;
 }
-.squareColumn5{
+.squareColumn4{
     left: 65%;
 }
-.squareColumn6{
+.squareColumn5{
     left: 80%;
 }
-.squareRow1{
+.squareRow0{
     top:5%;
 }
-.squareRow2{
+.squareRow1{
     top:20%;
 }
-.squareRow3{
+.squareRow2{
     top:35%;
 }
-.squareRow4{
+.squareRow3{
     top:50%;
 }
-.squareRow5{
+.squareRow4{
     top:65%;
 }
-.squareRow6{
+.squareRow5{
     top:80%;
 }
 .edge{
@@ -83,46 +83,46 @@
     width: 2%;
     padding-bottom: 15%; /* = width for a square aspect ratio */
 }
-.edgeColumn1{
+.edgeColumn0{
     left: 5%;
 }
-.edgeColumn2{
+.edgeColumn1{
     left: 20%;
 }
-.edgeColumn3{
+.edgeColumn2{
     left: 35%;
 }
-.edgeColumn4{
+.edgeColumn3{
     left: 50%;
 }
-.edgeColumn5{
+.edgeColumn4{
     left: 65%;
 }
-.edgeColumn6{
+.edgeColumn5{
     left: 80%;
 }
-.edgeColumn7{
+.edgeColumn6{
     left: 95%;
 }
-.edgeRow1{
+.edgeRow0{
     top:5%;
 }
-.edgeRow2{
+.edgeRow1{
     top:20%;
 }
-.edgeRow3{
+.edgeRow2{
     top:35%;
 }
-.edgeRow4{
+.edgeRow3{
     top:50%;
 }
-.edgeRow5{
+.edgeRow4{
     top:65%;
 }
-.edgeRow6{
+.edgeRow5{
     top:80%;
 }
-.edgeRow7{
+.edgeRow6{
     top:95%;
 }
 .corner{
@@ -137,40 +137,40 @@
     background-color: red;
     border-radius: 50%;
 }
-.pieceColumn1{
+.pieceColumn0{
     left: 9%;
 }
-.pieceColumn2{
+.pieceColumn1{
     left: 24%;
 }
-.pieceColumn3{
+.pieceColumn2{
     left: 39%;
 }
-.pieceColumn4{
+.pieceColumn3{
     left: 54%;
 }
-.pieceColumn5{
+.pieceColumn4{
     left: 69%;
 }
-.pieceColumn6{
+.pieceColumn5{
     left: 84%;
 }
-.pieceRow1{
+.pieceRow0{
     top:9%;
 }
-.pieceRow2{
+.pieceRow1{
     top:24%;
 }
-.pieceRow3{
+.pieceRow2{
     top:39%;
 }
-.pieceRow4{
+.pieceRow3{
     top:54%;
 }
-.pieceRow5{
+.pieceRow4{
     top:69%;
 }
-.pieceRow6{
+.pieceRow5{
     top:84%;
 }
 .target {
