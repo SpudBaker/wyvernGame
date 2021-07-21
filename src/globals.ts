@@ -37,7 +37,7 @@ export enum EdgeState {
     ]
     marker = new Piece(0, 0);
     squares: SquareState[][]  = [
-      [SquareState.ReachableChecked, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown],
+      [SquareState.ReachableNotChecked, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown],
       [SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown],
       [SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown], 
       [SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown], 

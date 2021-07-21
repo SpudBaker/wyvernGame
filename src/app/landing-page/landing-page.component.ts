@@ -80,23 +80,75 @@ export class LandingPageComponent {
     return Globals.EdgeState.Unknown;
   }
 
-  checkIfValidRouteExists(){
-   
-    let count = 1;
-
-    while (count > 0) {
-      count =0;
-      // squares.filter(element => element.state === SquareState.reachableNotChecked);
-      // squares.forEach(element => {
-        if (this.gameModel){
-        // has it got the target? - if so exit and mark status as true
-        // mark as reachable checked
-        // find adjacent squares and mark as reachableNotChecked if appropriate
-        // keep track of how many squares are marked, if none update 'changes' variable 
-        }; 
+  checkIfValidRouteExists() {
+    this.gameModel.validRouteExists = false;
+    for(let h = 0; h < 6; h++ ) {
+      for(let v = 0; v < 6; v++ ) {  
+        this.gameModel.squares[h][v] = Globals.SquareState.Unknown;
+        this.gameModel.squares[0][0] = Globals.SquareState.ReachableNotChecked;
+      }
     }
+    let count = 1;
+    while ((count > 0) && (!this.hasTargetBeenFound())) {
+      count = 0;
+      for(let h = 0; h < 6; h++ ) {
+        for(let v = 0; v < 6; v++ ) {   
+          if (this.gameModel.squares[h][v] === Globals.SquareState.ReachableNotChecked) {
+            this.gameModel.squares[h][v] = Globals.SquareState.ReachableChecked;
+            count = count + this.checkForAdjacentSquares(h, v);
+          }
+        }
+      }
+    }
+  }
 
+  checkForAdjacentSquares(h: number, v: number): number {
+    let counter = 0
+    if (v > 0) {
+      if (this.gameModel.squares[h][v-1] === Globals.SquareState.Unknown 
+            && this.gameModel.horizontalEdges[h][v] !== this.EdgeState.Wall 
+            && this.gameModel.horizontalEdges[h][v] !== this.EdgeState.Border ){
+        this.gameModel.squares[h][v-1] = Globals.SquareState.ReachableNotChecked;
+        counter ++;
+      }
+    }
+    if (h > 0) {  
+      if (this.gameModel.squares[h-1][v] === Globals.SquareState.Unknown
+            && this.gameModel.verticalEdges[h][v] !== this.EdgeState.Wall 
+            && this.gameModel.verticalEdges[h][v] !== this.EdgeState.Border ) {
+        this.gameModel.squares[h-1][v] = Globals.SquareState.ReachableNotChecked;
+        counter ++;
+      }
+    }
+    if (v < 5) {
+      if (this.gameModel.squares[h][v+1] === Globals.SquareState.Unknown
+            && this.gameModel.horizontalEdges[h][v+1] !== this.EdgeState.Wall 
+            && this.gameModel.horizontalEdges[h][v+1] !== this.EdgeState.Border ) {
+        this.gameModel.squares[h][v+1] = Globals.SquareState.ReachableNotChecked;
+        counter ++;
+      }
+    }
+    if (h < 5) {
+      if (this.gameModel.squares[h+1][v] === Globals.SquareState.Unknown
+            && this.gameModel.verticalEdges[h+1][v] !== this.EdgeState.Wall 
+            && this.gameModel.verticalEdges[h+1][v] !== this.EdgeState.Border
+        ) {
+        this.gameModel.squares[h+1][v] = Globals.SquareState.ReachableNotChecked;
+        counter ++;
+      }
+    }
+    return counter;
+  }
 
+  hasTargetBeenFound(): boolean {
+    switch (this.gameModel.squares[this.gameModel.target.horizontal][this.gameModel.target.vertical]) {
+      case Globals.SquareState.ReachableChecked:
+      case Globals.SquareState.ReachableNotChecked: {
+        this.gameModel.validRouteExists = true;
+        return true;
+      }
+    }
+    return false;
   }
 
 }
