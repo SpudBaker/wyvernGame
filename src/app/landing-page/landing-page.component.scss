@@ -1,7 +1,14 @@
-.divOuter{
+.divOuterLeft{
     position: absolute;
     top:75px;
     left:5%;
+    width: 40%;
+    padding-bottom: 40%; /* = width for a square aspect ratio */
+}
+.divOuterRight{
+    position: absolute;
+    top:75px;
+    left:55%;
     width: 40%;
     padding-bottom: 40%; /* = width for a square aspect ratio */
 }
@@ -173,10 +180,33 @@
 .pieceRow5{
     top:84%;
 }
+.rightTextArea{
+    font-size:large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:normal;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
 .target {
     position: absolute;
     height: 9%;
     width: 9%;
     background-color: blue;
     border-radius: 50%;
+}
+.button {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.warning {
+    color: red;
 }

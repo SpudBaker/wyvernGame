@@ -45,7 +45,7 @@ export enum EdgeState {
       [SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown, SquareState.Unknown], 
     ];
     target = new Piece(5, 5);
-    validRouteExists: boolean = false;
+    validRouteExists: boolean = true;
     verticalEdges: EdgeState[][] = [
       [EdgeState.Border, EdgeState.Border, EdgeState.Border, EdgeState.Border, EdgeState.Border, EdgeState.Border, EdgeState.Border],
       [EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown, EdgeState.Unknown],

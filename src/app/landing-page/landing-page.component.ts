@@ -151,4 +151,8 @@ export class LandingPageComponent {
     return false;
   }
 
+  buttonPress() {
+    alert("asdfghj");
+  }
+
 }
